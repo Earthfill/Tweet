@@ -1,9 +1,24 @@
 import React from "react";
 
-const RetweetButton = () => {
+const RetweetButton = ({ count }) => {
     return (
-        <i className="fa fa-retweet retweet-button" />
+        <span className="retweetbutton">
+            <i className="fa fa-retweet"/>
+            {getRetweetCount(count)}
+        </span>
     );
+}
+
+const getRetweetCount = (count) => {
+    if(count > 0) {
+        return (
+            <span className="retweet-count">
+                {count}
+            </span>
+        );
+    } else {
+        return null;
+    }
 }
 
 export default RetweetButton

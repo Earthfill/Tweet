@@ -2,9 +2,9 @@ import React from "react";
 
 const MoreOptionsButton = () => {
     return (
-      <div>
-
-      </div>
+      <span className="more-options-button">
+        <i className="fa fa-ellipsis-h"/>
+      </span>
     );
 }
 

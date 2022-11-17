@@ -1,8 +1,14 @@
 import React from "react";
 
-const LikeButton = () => {
+
+const LikeButton = ({ count }) => {
     return (
-        <i className="fa fa-heart like-button" />
+        <span className="likebutton">
+            <i className="fa fa-heart"/>
+            <span className="like-count">
+                {count > 0 ? count : null}
+            </span>
+        </span>
     );
 }
 
